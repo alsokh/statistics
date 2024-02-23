@@ -66,6 +66,9 @@ ggplot(imp.complete,
        aes(x = .imp, y = bmi, color = bmi.NA)) + 
   geom_jitter(show.legend = T,
               width = .1)
+md.pattern(imp.complete)
+stripplot(df.imp)
+densityplot(df.imp)
 
 # to run tests
 with(df.imp, mean(bmi))
