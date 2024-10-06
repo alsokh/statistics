@@ -32,8 +32,10 @@ RC.plt +
   # data points
   ggdist::stat_dots(justification = 1.2, binwidth = 0.07, side = "left", size = .1) +
   # OR geom_jitter(width = 0.15, size = 1, alpha = 0.5, side = "left") +
-  theme_minimal() +
-  labs(title = "Rain Cloud Plot", x = "Group", y = "Measure") 
+  theme_tq() +
+  scale_fill_tq() +
+  labs(title = "Rain Cloud Plot", x = "Group", y = "Measure") +
+  coord_flip()
   
 
 show(RC.plt)
